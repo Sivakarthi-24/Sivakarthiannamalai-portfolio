@@ -28,7 +28,7 @@ portfolio/
 │   └── resume-placeholder.pdf  # Placeholder resume PDF
 ├── robots.txt                   # Crawler rules and sitemap location
 ├── sitemap.xml                  # Published page URL for search engines
-├── .nojekyll                    # Serve static files as-is on GitHub Pages
+├── .nojekyll                    # Preserve static-file serving on compatible hosts
 └── README.md                    # Complete setup and deployment documentation
 ```
 
@@ -73,7 +73,8 @@ profile: {
   college: "Panimalar Engineering College, Chennai, India",
   github: "https://github.com/Sivakarthi-24",
   linkedin: "https://www.linkedin.com/in/sivakarthi-annamalai?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-  email: "sivakarthiannmalai@gmail.com",
+  email: "sivakarthiannamalai@gmail.com",
+  contactEndpoint: "",
   photoPath: "https://raw.githubusercontent.com/Sivakarthi-24/Sivakarthiannamalai-portfolio/main/profile-photo.jpeg",
   studyStartYear: 2026,
   studyStartMonth: 6,
@@ -89,15 +90,29 @@ profile: {
 
 ---
 
-## 🌐 Deployment to GitHub Pages
+## Contact Form Delivery
 
-1. Push your changes to your GitHub repository:
-   ```bash
-   git add .
-   git commit -m "Refine professional portfolio design"
-   git push origin main
-   ```
-2. Navigate to your repository on GitHub.
-3. Go to **Settings** -> **Pages**.
-4. Under **Branch**, select `main` and root `/`.
-5. Your portfolio will be live at `https://Sivakarthi-24.github.io/Sivakarthiannamalai-portfolio/`!
+The contact form saves feedback in the visitor's browser by default; it does not send anything to Sivakarthi. To enable delivery, set `PORTFOLIO_DATA.profile.contactEndpoint` in `js/data.js` to an HTTPS endpoint that accepts a JSON `POST` with `name`, `email`, `subject`, and `message`, and returns a successful 2xx response. The endpoint must handle CORS for the deployed site. If the request fails, the form reports the failure and saves the message locally when browser storage is available. Do not put private API keys in `js/data.js`; keep them on the server.
+
+## Build and Local Validation
+
+This is a static site and has no `package.json` or npm build script. Check JavaScript syntax with:
+
+```bash
+node --check js/data.js
+node --check js/main.js
+```
+
+Run locally with VS Code Live Server or `npx serve .`.
+
+## Deployment to Vercel
+
+The site is deployed as a static Vercel project at `https://sivakarthiannamalai-portfolio.vercel.app/`. Push the updated files to the connected GitHub branch to trigger Vercel's automatic deployment. From the repository root:
+
+```bash
+git add index.html css/style.css js/data.js js/main.js robots.txt sitemap.xml README.md
+git commit -m "Improve portfolio responsiveness and contact form"
+git push origin main
+```
+
+If your deployment branch is not `main`, replace `main` with the connected branch name.

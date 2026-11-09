@@ -6,24 +6,24 @@
   <title>Sivakarthi A | ECE Student &amp; Aspiring Embedded Systems / IoT Developer</title>
   
   <!-- Meta SEO -->
-  <meta name="description" content="Personal developer portfolio of Sivakarthi, a first-year Electronics and Communication Engineering (ECE) student at Panimalar Engineering College, Chennai. Passionate about C, Python, Embedded Systems, and IoT.">
+  <meta name="description" content="Portfolio of Sivakarthi A, an Electronics and Communication Engineering student at Panimalar Engineering College, Chennai, building web, embedded systems, and IoT projects.">
   <meta name="author" content="Sivakarthi">
   <meta name="keywords" content="Sivakarthi, Panimalar Engineering College, ECE student, Embedded Systems, IoT, C Programming, Python, Developer Portfolio, Chennai">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://sivakarthi-24.github.io/Sivakarthiannamalai-portfolio/">
+  <link rel="canonical" href="https://sivakarthiannamalai-portfolio.vercel.app/">
 
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sivakarthi-24.github.io/Sivakarthiannamalai-portfolio/">
+  <meta property="og:url" content="https://sivakarthiannamalai-portfolio.vercel.app/">
   <meta property="og:title" content="Sivakarthi | ECE Student &amp; Aspiring Embedded Systems / IoT Developer">
-  <meta property="og:description" content="First-year ECE student at Panimalar Engineering College, Chennai. Passionate about programming, electronics, and building practical technology projects.">
-  <meta property="og:image" content="https://sivakarthi-24.github.io/Sivakarthiannamalai-portfolio/assets/og-preview.svg">
+  <meta property="og:description" content="Explore Sivakarthi's web, embedded systems, and IoT projects, technical skills, and learning journey.">
+  <meta property="og:image" content="https://sivakarthiannamalai-portfolio.vercel.app/assets/og-preview.svg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sivakarthi | ECE Student &amp; Aspiring Embedded Systems / IoT Developer">
-  <meta name="twitter:description" content="First-year ECE student at Panimalar Engineering College, Chennai. Passionate about programming, electronics, and building practical technology projects.">
-  <meta name="twitter:image" content="https://sivakarthi-24.github.io/Sivakarthiannamalai-portfolio/assets/og-preview.svg">
+  <meta name="twitter:description" content="Explore Sivakarthi's web, embedded systems, and IoT projects, technical skills, and learning journey.">
+  <meta name="twitter:image" content="https://sivakarthiannamalai-portfolio.vercel.app/assets/og-preview.svg">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
@@ -836,30 +836,30 @@
             <form id="contact-form" class="contact-form" novalidate>
               <div class="form-group" id="group-name">
                 <label for="form-name" class="form-label">Full Name *</label>
-                <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Ramesh Kumar" required autocomplete="name">
-                <span class="form-error-msg">Please enter your name (minimum 2 characters).</span>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Ramesh Kumar" required autocomplete="name" maxlength="100" aria-describedby="error-name">
+                <span class="form-error-msg" id="error-name">Please enter your name (2–100 characters).</span>
               </div>
 
               <div class="form-group" id="group-email">
                 <label for="form-email" class="form-label">Email Address *</label>
-                <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. ramesh@example.com" required autocomplete="email">
-                <span class="form-error-msg">Please enter a valid email address.</span>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. ramesh@example.com" required autocomplete="email" maxlength="254" aria-describedby="error-email">
+                <span class="form-error-msg" id="error-email">Please enter a valid email address.</span>
               </div>
 
               <div class="form-group" id="group-subject">
                 <label for="form-subject" class="form-label">Subject *</label>
-                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Internship Inquiry / Mentorship" required>
-                <span class="form-error-msg">Please enter a subject (minimum 3 characters).</span>
+                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Internship Inquiry / Mentorship" required maxlength="160" aria-describedby="error-subject">
+                <span class="form-error-msg" id="error-subject">Please enter a subject (3–160 characters).</span>
               </div>
 
               <div class="form-group" id="group-message">
                 <label for="form-message" class="form-label">Message *</label>
-                <textarea id="form-message" name="message" class="form-textarea" placeholder="Write your message here..." required></textarea>
-                <span class="form-error-msg">Please write a message (minimum 10 characters).</span>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Write your message here..." required maxlength="5000" aria-describedby="error-message"></textarea>
+                <span class="form-error-msg" id="error-message">Please write a message (10–5000 characters).</span>
               </div>
 
               <div class="form-notice">
-                Your name, subject, and message are saved in this browser and may be visible to others using it. Your email is not saved. Nothing is sent to Sivakarthi.
+                This form saves feedback only in this browser unless a contact API is configured. Without an API, nothing is sent to Sivakarthi and your email is not saved.
               </div>
 
               <button type="submit" class="btn btn-primary" id="form-submit-btn">

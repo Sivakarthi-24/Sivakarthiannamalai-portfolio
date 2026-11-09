@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sivakarthi-24.github.io/Sivakarthiannamalai-portfolio/sitemap.xml
+Sitemap: https://sivakarthiannamalai-portfolio.vercel.app/sitemap.xml
